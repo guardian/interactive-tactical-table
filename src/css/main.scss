@@ -31,9 +31,15 @@ $ukip: #7D0068;
     display: table-row;
 }
 
+.ge-tv-desktop {
+    @media (max-width:500px) {
+            display: none !important;
+    }
+}
+
 .ge-tv-cell {
     display: table-cell;
-    @include fs-data(2);
+    @include fs-data(3);
     padding: 2px 5px 0px 0px;
 
 }
