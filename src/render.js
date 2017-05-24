@@ -8,8 +8,8 @@ var config = JSON.parse(rawconfig);
 export async function render() {
     var rawdata = await rp(config.docDataJson);
     var data = JSON.parse(rawdata);
-    var tabledata = data.sheets.tableDataSheet;
-    var html = mustache.render(mainTemplate,tabledata)
-    console.log(html);
-    return html;
+    var seats = data.sheets.Sheet1;
+    seats.map(function(s){s.class = s.oppoparty.replace(" ","")})
+    var html = mustache.render(mainTemplate,seats);
+   return html;
 }

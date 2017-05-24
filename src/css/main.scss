@@ -2,12 +2,50 @@
 @import "fonts";
 
 // Uncomment for embeds
-//@import "embed";
+@import "embed";
 
 // Uncomment for full screen (including immersive article main media)
 //@import "fullscreen";
 
+
+$other : #e3e3e3;
+$lab: #E42729;
+$con: #1A60A9;
+$ld: #FAB817;
+$green: #53AC32;
+$ukip: #7D0068;
+
+
 .element-atom,
 .interactive-atom {
     margin: 0 !important;
+}
+
+.ge-tv-headerrow {
+    display: table-header-group;
+    @include fs-bodyHeading(1);
+    margin-bottom: 20px;
+}
+
+.ge-tv-row {
+    display: table-row;
+}
+
+.ge-tv-cell {
+    display: table-cell;
+    @include fs-data(2);
+    padding: 2px 5px 0px 0px;
+
+}
+
+.ge-tv-seat {
+max-width: 10%;
+}
+
+.gv-Labour {
+    color: $lab;
+}
+
+.gv-LibDem {
+    color: $ld;
 }
