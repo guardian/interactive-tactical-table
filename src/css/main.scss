@@ -14,6 +14,8 @@ $con: #1A60A9;
 $ld: #FAB817;
 $green: #53AC32;
 $ukip: #7D0068;
+$c-bar: #D4D9DF;
+
 
 
 .element-atom,
@@ -28,43 +30,102 @@ h2 em {
     font-style: normal;
 }
 
-.content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2 {  
+.content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2 {
       max-width: 640px; }
 
-@media (min-width: 1140px) 
-    {      .content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2 
+@media (min-width: 1140px)
+    {      .content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2
         {        margin-left: 160px;
                 margin-right: 0; }
-    }    
-            
-            
-@media (min-width: 1300px) 
-    {      .content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2 
-        {        
-            margin-left: 240px;        
+    }
+
+
+@media (min-width: 1300px)
+    {      .content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2
+        {
+            margin-left: 240px;
             margin-right: 0; }
-    }    
+    }
 
 .ge-tv-headerrow {
     display: table-header-group;
-    @include fs-bodyHeading(1);
     margin-bottom: 20px;
+    color: #767676;
+    .ge-tv-cell {
+        border: 0;
+    }
 }
 
+.ge-tv-table {
+    display: table;
+    width: 100%;
+}
 .ge-tv-row {
     display: table-row;
+    width: 100%;
 }
 
-.ge-tv-desktop {
-    @media (max-width:500px) {
-            display: none !important;
+@include mq($until:tablet) {
+    .ge-tv-desktop {
+        display: none !important;
     }
 }
 
 .ge-tv-cell {
     display: table-cell;
     @include fs-data(3);
-    padding: 2px 5px 0px 0px;
+    padding: 3px 3px 3px 0;
+    border-top: 1px solid rgba(212, 217, 223, 0.5);
+    &:last-of-type {
+        padding-right: 0;
+    }
+    .party {
+        padding: 3px;
+        margin-left: -3px;
+        border-radius: 3px;
+        color: #fff;
+        -webkit-font-smoothing: subpixel-antialiased;
+        &.Labour {
+            background-color: $lab;
+            // padding-right: 9px;
+        }
+        &.LibDem {
+            background-color: $ld;
+        }
+    }
+
+    &.ge-tv-seat {
+        width: 37%;
+        .ge-tv-row & {
+            font-weight: 700;
+        }
+    }
+    &.ge-tv-con-vote {
+        width: 21%;
+    }
+    &.ge-tv-oppo-vote {
+        width: 21%;
+    }
+    &.ge-tv-tactical-party {
+        width: 21%;
+    }
+    @include mq(tablet) {
+        &.ge-tv-seat {
+            width: 37%;
+        }
+        &.ge-tv-con-vote {
+            width: 21%;
+        }
+        &.ge-tv-oppo-vote {
+            width: 21%;
+        }
+        &.ge-tv-tactical-party {
+            width: 21%;
+        }
+        &.ge-tv-ukip-vote {
+            width: 25%;
+        }
+    }
 
 }
 
@@ -72,12 +133,14 @@ h2 em {
     max-width: 10%;
 }
 
-.gv-Labour {
-    color: $lab;
-}
 
-.gv-LibDem {
-    color: $ld;
+
+.ge-gv-region {
+    font-family: 'Guardian Egyptian Web', 'Guardian Egyptian Text Web', Georgia, serif;
+    color: #00456E;
+    font-weight: 600;
+    margin: 24px 0 0;
+    font-size: 16px;
 }
 
 // apps tweaks
