@@ -69,7 +69,7 @@ h2 em {
 }
 
 .ge-tv-seat {
-max-width: 10%;
+    max-width: 10%;
 }
 
 .gv-Labour {
@@ -78,4 +78,177 @@ max-width: 10%;
 
 .gv-LibDem {
     color: $ld;
+}
+
+// apps tweaks
+.ios,
+.android,
+.windows {
+    p, h1, h2, h3 {
+        margin: 0; padding:0;
+    }
+    .interactive-nav {
+        background-color: transparent;
+    }
+    .interactive-atom {
+        border-top: 0;
+    }
+    .article__header {
+        #section {
+            display: none;
+        }
+        #headline {
+            font-weight: 600;
+        }
+        .standfirst {
+            margin-top: -18px;
+        }
+    }
+}
+
+// header & main template
+.badge-slot {
+    width: 42px;
+    height: 30px;
+}
+.content__headline,
+.content__headline,
+.content__section-label__link {
+    font-size: 28px;
+    line-height: 28px;
+}
+.content__headline {
+    color: #333;
+    font-weight: 800;
+    display: block;
+    width: auto;
+    @include mq(tablet) {
+        font-size: 44px;
+        line-height: 45px;
+        margin-top: 12px;
+        padding-top: 0;
+    }
+}
+.content__section-label__link {
+    display: inline-block;
+    height: 28px;
+    width: 210px;
+    overflow: hidden;
+    color: #63747C;
+    @include mq(375px) {
+        overflow: auto;
+        width: auto;
+    }
+    @include mq(tablet) {
+        height: auto;
+        font-size: 22px;
+        line-height: 1em;
+        padding-top: 3px;
+    }
+}
+
+.content__standfirst {
+    color: #767676;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    @include mq(tablet) {
+        color: #767676;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    a {
+        color: #444;
+        border-bottom: 1px solid #767676;
+        text-decoration: none;
+    }
+}
+.content--interactive .content__main-column:not(.content__meta-footer) .content__meta-container {
+    margin-bottom: 0;
+    min-height: none;
+    @include mq(leftCol) {
+        margin-top: 0;
+        position: absolute;
+        z-index: 20;
+        top: 9px;
+        z-index: 200;
+    }
+
+    .meta__extras {
+        border-top: 2px solid $c-bar;
+    }
+    .meta__save-for-later,
+    .meta__number,
+    .meta__numbers {
+        display: none !important;
+    }
+    .social-icon.social-icon--more {
+        background-color: #BDBDBD;
+        circle {
+            fill: #DCDCDC;
+        }
+    }
+    @include mq(leftCol) {
+        width: 140px;
+        left: -160px;
+    }
+    @include mq(wide) {
+        width: 220px;
+        left: -240px;
+    }
+}
+// removes second date line
+.content__head .content__main-column .content__dateline {
+    display: none;
+}
+
+.content__labels {
+    display: block;
+}
+.content__labels--not-immersive {
+    border: 0;
+}
+
+.interactive-ad-banner {
+    display: flex;
+    justify-content: center;
+    background-color: guss-colour(white);
+    position: relative;
+    z-index: 0;
+
+    @include mq($from: tablet) {
+        .ad-slot--rendered {
+            margin: 20px 0 40px 0;
+        }
+    }
+}
+
+.byline {
+    margin-top: 18px;
+}
+.article-footer {
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 620px;
+    clear: both;
+    @include mq(leftCol) {
+        margin-left: 160px;
+    }
+    @include mq(wide) {
+        margin-left: 240px;
+    }
+    &__wrap-up {
+    }
+    &__end-notes {
+        margin-top: 24px;
+        padding-top: 6px;
+        border-top: 2px solid $c-bar;
+        font-family: 'Guardian Text Sans Web', 'Guardian Sans Web', helvetica, arial, sans-serif;
+        color: #767676;
+    }
+}
+
+figure.element.element-atom {
+    margin-top: 9px;
 }
