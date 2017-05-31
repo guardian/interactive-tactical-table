@@ -47,9 +47,7 @@ h2 em {
             margin-right: 0; }
     }
 
-  .gv-table-wrapper {
-    margin-bottom: 20px;
-  }
+
 
 .ge-tv-headerrow {
     display: table-header-group;
@@ -58,6 +56,10 @@ h2 em {
     .ge-tv-cell {
         border: 0;
     }
+}
+
+.gv-table-wrapper {
+  margin-bottom: 20px;
 }
 
 .ge-tv-table {
@@ -102,19 +104,22 @@ h2 em {
     }
 
     &.ge-tv-seat {
-        width: 37%;
+        width: 41%;
+        padding-right: 2px;
         .ge-tv-row & {
             font-weight: 700;
         }
     }
     &.ge-tv-con-vote {
-        width: 21%;
+        width: 15%;
+
     }
     &.ge-tv-oppo-vote {
-        width: 21%;
+        width: 22%;
     }
     &.ge-tv-tactical-party {
-        width: 21%;
+        width: 22%;
+        text-align: center;
     }
     &.cell-align-right {
       text-align: right;
@@ -172,10 +177,16 @@ h2 em {
         }
         #headline {
             font-weight: 600;
+            font-size: 28px !important;
+            line-height: 28px !important;
         }
         .standfirst {
             margin-top: -18px;
         }
+    }
+    .meta {
+      font-size: 14px !important;
+      line-height: 14px !important;
     }
 }
 
@@ -332,19 +343,13 @@ figure.element.element-atom {
 
   > h2 {
       margin-top: 20px;
-      @include fs-bodyHeading(1);
+      font-family: $f-sans-serif-text !important;
+      font-size: 14px !important;
+      line-height: 20px !important;
+      font-weight: normal !important;
       position: relative;
       padding-top: 10px;
-      color: #767676;
-
-      &:before {
-          position: absolute;
-          top: 0;
-          width: 120px;
-          height: 1px;
-          background-color: #eaeaea;
-          content: ' ';
-      }
+      color: #005689;
 
       &:first-child {
         margin-top: 0;
@@ -355,9 +360,14 @@ figure.element.element-atom {
   > h2 + h2 {
       margin-top: 0;
       padding-top: 0;
-      @include fs-header(5);
+      font-family: "Guardian Egyptian Web",Georgia,serif !important;
+      font-size: 22px !important;
+      line-height: 28px !important;
+      font-weight: 900 !important;
       @include mq(tablet){
-          @include fs-header(5);
+        font-size: 24px !important;
+        line-height: 28px !important;
+
       }
 
       color: #333;
@@ -368,11 +378,19 @@ figure.element.element-atom {
   }
 
   b, strong {
-    @include fs-header(2);
+    font-family: "Guardian Egyptian Web",Georgia,serif;
+    font-size: 18px !important;
+    line-height: 24px !important;
+    font-weight: 900 !important;
     @include mq(tablet){
-        @include fs-header(3);
+      font-size: 20px !important;
+      line-height: 24px !important;
     }
   }
 
 
+}
+
+.prose h2+p {
+  margin-top: 0;
 }
