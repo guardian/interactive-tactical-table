@@ -15,7 +15,7 @@ $ld: #FAB817;
 $green: #53AC32;
 $ukip: #7D0068;
 $c-bar: #D4D9DF;
-
+$snp: #FED905;
 
 
 .element-atom,
@@ -91,6 +91,9 @@ h2 em {
         }
         &.LibDem {
             background-color: $ld;
+        }
+                &.SNP {
+            background-color: $snp;
         }
     }
 
