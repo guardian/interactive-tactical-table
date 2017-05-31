@@ -30,18 +30,18 @@ h2 em {
     font-style: normal;
 }
 
-.content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2 {
+.content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2, .ge-tv-table-wrapper {
       max-width: 640px; }
 
 @media (min-width: 1140px)
-    {      .content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2
+    {      .content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2, .ge-tv-table-wrapper
         {        margin-left: 160px;
                 margin-right: 0; }
     }
 
 
 @media (min-width: 1300px)
-    {      .content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2
+    {      .content__main > p, .content__main h2, .content__main-column--interactive > p, .content__main-column--interactive h2, .article__body > p, .article__body h2, .ge-tv-table-wrapper
         {
             margin-left: 240px;
             margin-right: 0; }
