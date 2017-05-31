@@ -14,7 +14,7 @@ function regionalise(seats) {
  {name: "London", "seats" : []},
         {name: "North-east", "seats" : []},
         {name: "North-west", "seats" : []},
-      {name: "  Scotland", "seats" : []},
+      {name: "Scotland", "seats" : []},
         {name: "South-east", "seats" : []},
         {name: "South-west", "seats" : []},
    {name: "Wales", "seats" : []},
