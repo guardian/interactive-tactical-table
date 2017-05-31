@@ -4,18 +4,18 @@
 <div class="ge-tv-table" id="{{name}}">
     <div class="ge-tv-headerrow">
         <div class="ge-tv-cell ge-tv-seat">Seat</div>
+        <div class="ge-tv-cell ge-tv-tactical-party">Vote for</div>
         <div class="ge-tv-cell ge-tv-con-vote">Con vote</div>
-        <div class="ge-tv-cell ge-tv-oppo-vote">Total opp. vote</div>
+        <div class="ge-tv-cell ge-tv-oppo-vote">Opposition vote</div>
         <div class="ge-tv-cell ge-tv-ukip-vote ge-tv-desktop">Ukip vote</div>
-        <div class="ge-tv-cell ge-tv-tactical-party">Biggest opp. party</div>
     </div>
     {{#seats}}
     <div class="ge-tv-row">
         <div class="ge-tv-cell ge-tv-seat">{{seat}}</div>
+        <div class="ge-tv-cell ge-tv-tactical-party gv-{{class}}"><span class='party {{class}}'>{{oppoparty}}</span></div>
         <div class="ge-tv-cell ge-tv-con-vote">{{con}}</div>
         <div class="ge-tv-cell ge-tv-oppo-vote">{{oppo}}</div>
         <div class="ge-tv-cell ge-tv-ukip-vote ge-tv-desktop">{{ukip}}</div>
-        <div class="ge-tv-cell ge-tv-tactical-party gv-{{class}}"><span class='party {{class}}'>{{oppoparty}}</span></div>
     </div>
     {{/seats}}
 </div>
