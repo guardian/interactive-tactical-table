@@ -47,6 +47,10 @@ h2 em {
             margin-right: 0; }
     }
 
+  .gv-table-wrapper {
+    margin-bottom: 20px;
+  }
+
 .ge-tv-headerrow {
     display: table-header-group;
     margin-bottom: 20px;
@@ -112,21 +116,24 @@ h2 em {
     &.ge-tv-tactical-party {
         width: 21%;
     }
+    &.cell-align-right {
+      text-align: right;
+    }
     @include mq(tablet) {
         &.ge-tv-seat {
-            width: 37%;
+            width: 35%;
         }
         &.ge-tv-con-vote {
-            width: 21%;
+            width: 12%;
         }
         &.ge-tv-oppo-vote {
-            width: 21%;
+            width: 17%;
         }
         &.ge-tv-tactical-party {
-            width: 21%;
+            width: 17%;
         }
         &.ge-tv-ukip-vote {
-            width: 25%;
+            width: 17%;
         }
     }
 
@@ -317,4 +324,55 @@ h2 em {
 
 figure.element.element-atom {
     margin-top: 9px;
+}
+
+.content__main-column--interactive, .article__body {
+
+
+
+  > h2 {
+      margin-top: 20px;
+      @include fs-bodyHeading(1);
+      position: relative;
+      padding-top: 10px;
+      color: #767676;
+
+      &:before {
+          position: absolute;
+          top: 0;
+          width: 120px;
+          height: 1px;
+          background-color: #eaeaea;
+          content: ' ';
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+  }
+
+  > h2 + h2 {
+      margin-top: 0;
+      padding-top: 0;
+      @include fs-header(5);
+      @include mq(tablet){
+          @include fs-header(5);
+      }
+
+      color: #333;
+
+      &:before {
+          display: none;
+      }
+  }
+
+  b, strong {
+    @include fs-header(2);
+    @include mq(tablet){
+        @include fs-header(3);
+    }
+  }
+
+
 }
