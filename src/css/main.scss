@@ -48,7 +48,7 @@ $selected: #717D85;
     }
 }
 
-svg path {
+.ge-tv-region-map svg path {
     fill: #ddd;
 }
 
@@ -88,10 +88,9 @@ h2 em {
 }
 
 .ge-tv-table-wrapper {
-width: calc(98% - 100px);
-    clear: both;
     margin-top: 5px;
   margin-bottom: 20px;
+  padding-bottom: 100px;
 }
 
 .ge-tv-region-wrapper {
