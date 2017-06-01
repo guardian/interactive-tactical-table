@@ -16,11 +16,40 @@ $green: #53AC32;
 $ukip: #7D0068;
 $c-bar: #D4D9DF;
 $snp: #FED905;
+$selected: #717D85;
 
 
 .element-atom,
 .interactive-atom {
     margin: 0 !important;
+}
+
+.ge-tv-region-map {
+    width: 66px;
+    display: inline;
+    float: left;
+
+    @include mq($until:tablet) {
+        display: none;
+    }
+}
+
+.gv-tv-selected {
+    fill: $selected;
+}
+
+.ge-tv-chart-wrapper {
+    display: inline;
+    float: right;
+    width: calc(98% - 76px);
+    @include mq($until:tablet) {
+        display: block;
+        width: 100%;
+    }
+}
+
+svg path {
+    fill: #ddd;
 }
 
 h2 em {
@@ -59,7 +88,15 @@ h2 em {
 }
 
 .ge-tv-table-wrapper {
+width: calc(98% - 100px);
+    clear: both;
+    margin-top: 5px;
   margin-bottom: 20px;
+}
+
+.ge-tv-region-wrapper {
+    padding-top: 24px;
+    clear: both;
 }
 
 .ge-tv-table {
@@ -79,6 +116,7 @@ h2 em {
 
 .ge-tv-cell {
     display: table-cell;
+    text-align: left;
     @include fs-data(3);
     padding: 3px 3px 3px 0;
     border-top: 1px solid rgba(212, 217, 223, 0.5);
@@ -86,6 +124,7 @@ h2 em {
         padding-right: 0;
     }
     .party {
+        text-align: left;
         padding: 3px;
         margin-left: -3px;
         border-radius: 3px;
@@ -100,6 +139,7 @@ h2 em {
         }
                 &.SNP {
             background-color: $snp;
+            color: #333;
         }
     }
 
@@ -119,7 +159,7 @@ h2 em {
     }
     &.ge-tv-tactical-party {
         width: 22%;
-        text-align: center;
+//        text-align: center;
     }
     &.cell-align-right {
       text-align: right;
@@ -154,8 +194,9 @@ h2 em {
     font-family: 'Guardian Egyptian Web', 'Guardian Egyptian Text Web', Georgia, serif;
     color: #00456E;
     font-weight: 600;
-    margin: 24px 0 0;
     font-size: 16px;
+    margin-top: -6px;
+    margin-bottom: 0px;
 }
 
 // apps tweaks
