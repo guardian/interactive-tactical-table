@@ -12,7 +12,7 @@ Array.from(mapdivs).forEach(function(d){
     d.innerHTML = maphtml;
 })
 
-var regions = document.querySelectorAll('path');
+var regions = document.querySelectorAll('.ge-tv-region-map path');
 
 Array.from(regions).forEach(function(r){
     var parentregion = r.parentElement.parentElement.parentElement;
