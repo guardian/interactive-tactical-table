@@ -2,11 +2,14 @@
 @import "fonts";
 
 // Uncomment for embeds
-@import "embed";
+//@import "embed";
 
 // Uncomment for full screen (including immersive article main media)
 //@import "fullscreen";
 
+html,body {
+    overflow: visible !important;
+}
 
 $other : #e3e3e3;
 $lab: #E42729;
