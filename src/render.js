@@ -39,7 +39,6 @@ export async function render() {
     var seats = data.sheets.Sheet1;
     seats.map(function(s){s.class = s.oppoparty.replace(" ","")})
     var regions = regionalise(seats);
-    console.log(regions);
     var html = mustache.render(mainTemplate,regions);
    return html;
 }
