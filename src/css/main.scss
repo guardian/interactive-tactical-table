@@ -132,14 +132,14 @@ h2 em {
         border-radius: 3px;
         color: #fff;
         -webkit-font-smoothing: subpixel-antialiased;
-        &.Labour {
+        &.Labour,&.lab {
             background-color: $lab;
             // padding-right: 9px;
         }
-        &.LibDem {
+        &.LibDem,&.ld {
             background-color: $ld;
         }
-                &.SNP {
+                &.SNP,&.snp {
             background-color: $snp;
             color: #333;
         }

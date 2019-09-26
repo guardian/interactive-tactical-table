@@ -9,21 +9,21 @@ var config = JSON.parse(rawconfig);
 
 function regionalise(seats) {
     var regions = [
-        {name: "East", "seats" : []},
-        {name: "East Midlands", "seats" : []},
+        {name: "East", govname: "East","seats" : []},
+        {name: "East Midlands",govname:"East Midlands", "seats" : []},
  {name: "London", "seats" : []},
-        {name: "North-east", "seats" : []},
-        {name: "North-west", "seats" : []},
-      {name: "Scotland", "seats" : []},
-        {name: "South-east", "seats" : []},
-        {name: "South-west", "seats" : []},
+        {name: "North-east",govname: "North East", "seats" : []},
+        {name: "North-west",govname: "North West", "seats" : []},
+      {name: "Scotland", govname:"Scotland", "seats" : []},
+        {name: "South-east",govname:"South East", "seats" : []},
+        {name: "South-west",govname:"South West", "seats" : []},
    {name: "Wales", "seats" : []},
-        {name: "West Midlands", "seats" : []},
-        {name: "Yorkshire and the Humber", "seats" : []}
+        {name: "West Midlands",govname: "West Midlands", "seats" : []},
+        {name: "Yorkshire and the Humber",govname:"Yorkshire and The Humber", "seats" : []}
     ];
     seats.forEach(function (s) {
         regions.forEach(function (r) {
-            if (r.name == s.location) {
+            if (r.govname == s.region_name) {
                     r.seats.push(s);
             }            
         })
@@ -38,10 +38,10 @@ export async function render() {
     var data = JSON.parse(rawdata);
     var seats = data.sheets.result2017;
     seats.map(function(s){
-        console.log(s);
         s.class = s.biggest_oppo_party.replace(" ","")
     })
-    var regions = regionalise(seats);
+    var tacticalseats = seats.filter(s => s.tactical_opportunity == "yes");
+    var regions = regionalise(tacticalseats);
     var html = mustache.render(mainTemplate,regions);
    return html;
 }

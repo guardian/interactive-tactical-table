@@ -10,15 +10,13 @@
                     <div class="ge-tv-cell ge-tv-tactical-party">Vote for</div>
                     <div class="ge-tv-cell ge-tv-con-vote cell-align-right">Con vote</div>
                     <div class="ge-tv-cell ge-tv-oppo-vote cell-align-right">Opposition vote</div>
-                    <div class="ge-tv-cell ge-tv-ukip-vote ge-tv-desktop cell-align-right">Ukip vote</div>
                 </div>
                 {{#seats}}
                 <div class="ge-tv-row">
                     <div class="ge-tv-cell ge-tv-seat">{{constituency_name}}</div>
-                    <div class="ge-tv-cell ge-tv-tactical-party gv-{{class}}"><span class='party {{class}}'>{{biggest_oppo_party}}</span></div>
+                    <div class="ge-tv-cell ge-tv-tactical-party gv-{{class}}"><span class='party {{class}}'>{{second_party}}</span></div>
                     <div class="ge-tv-cell ge-tv-con-vote cell-align-right">{{con}}</div>
-                    <div class="ge-tv-cell ge-tv-oppo-vote cell-align-right">{{oppo}}</div>
-                    <div class="ge-tv-cell ge-tv-ukip-vote ge-tv-desktop cell-align-right">{{ukip}}</div>
+                    <div class="ge-tv-cell ge-tv-oppo-vote cell-align-right">{{total_opposition_vote}}</div>
                 </div>
                 {{/seats}}
             </div>
