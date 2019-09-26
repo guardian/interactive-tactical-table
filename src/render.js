@@ -36,8 +36,11 @@ function regionalise(seats) {
 export async function render() {
     var rawdata = await rp(config.docDataJson);
     var data = JSON.parse(rawdata);
-    var seats = data.sheets.Sheet1;
-    seats.map(function(s){s.class = s.oppoparty.replace(" ","")})
+    var seats = data.sheets.result2017;
+    seats.map(function(s){
+        console.log(s);
+        s.class = s.biggest_oppo_party.replace(" ","")
+    })
     var regions = regionalise(seats);
     var html = mustache.render(mainTemplate,regions);
    return html;
